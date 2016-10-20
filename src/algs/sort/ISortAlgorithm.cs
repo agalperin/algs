@@ -1,7 +1,9 @@
+using System;
+
 namespace agalperin.algorithms.sort
 {
     public interface ISortAlgorithm<T>
     {
-        T[] Sort(T[] input);
+        void Sort(T[] input, Comparison<T> comparison);
     }
 }

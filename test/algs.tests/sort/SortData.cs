@@ -8,7 +8,8 @@ namespace agalperin.algorithms.sort.tests
     {
         private readonly List<object[]> _data = new List<object[]>{
             new object[] {new[] { 2, 1, 3, 4 }, new[] { 1, 2, 3 ,4 }},
-            new object[] {new[] { 5, 1, 4, 2, 8}, new[] {1, 2, 4, 5, 8}}
+            new object[] {new[] { 5, 1, 4, 2, 8}, new[] {1, 2, 4, 5, 8}},
+            new object[] {new[] { 2, 1, 3}, new[] { 1, 2 , 3}}
         };
 
         public IEnumerator<object[]> GetEnumerator()

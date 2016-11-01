@@ -1,27 +1,27 @@
 using System.Collections.Generic;
-using FluentAssertions;
 using Xunit;
+using FluentAssertions;
 
 namespace agalperin.algorithms.sort.tests
 {
-    public class BubbleSortAlgorithmTests
+    public sealed class InsertionSortTTests
     {
         [Fact]
         public void should_sort_an_empty_array()
         {
-            int[] input = new int[]{};
-            var sut = new BubbleSortAlgorithm<int>();
-
+            int[] input = new int[] {};;
+            var sut = new InsertionSortAlgorithm<int>();
+            
             sut.Sort(input, ComparisonUtility.CompareInts);
 
             input.Should().BeEmpty();
         }
 
         [Fact]
-        public void should_sort_array_of_one_element()
+        public void should_sort_array_with_one_element()
         {
-            int[] input = new[] {1};
-            var sut = new BubbleSortAlgorithm<int>();
+            int[] input = new[] { 1 };
+            var sut = new InsertionSortAlgorithm<int>();
 
             sut.Sort(input, ComparisonUtility.CompareInts);
 
@@ -32,7 +32,7 @@ namespace agalperin.algorithms.sort.tests
         [ClassData(typeof(SortData))]
         public void should_sort_array(int[] input, IEnumerable<int> expected)
         {
-            var sut = new BubbleSortAlgorithm<int>();
+            var sut = new InsertionSortAlgorithm<int>();
 
             sut.Sort(input, ComparisonUtility.CompareInts);
 
